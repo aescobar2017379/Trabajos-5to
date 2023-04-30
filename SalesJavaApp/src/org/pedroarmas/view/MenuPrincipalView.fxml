@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pedroarmas.controller.MenuPrincipalController">
+   <children>
+      <Pane prefHeight="49.0" prefWidth="527.0" style="-fx-background-color: #BDBDBD;">
+         <children>
+            <MenuBar prefHeight="44.0" prefWidth="527.0" stylesheets="@../resource/SalesObjects.css">
+              <menus>
+                <Menu mnemonicParsing="false" text="Modulos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ventanaCliente" text="Cliente" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaFormaPago" text="Formas de Pago" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaFactura" text="Facturas" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaDetalleFactura" text="Detalle de Factura" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaCategoria" text="Categorías" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reportes">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Facturación" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="?">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+      <ImageView fitHeight="351.0" fitWidth="555.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoPrincipal.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

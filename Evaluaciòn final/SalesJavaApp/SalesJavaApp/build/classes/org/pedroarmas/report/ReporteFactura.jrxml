@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFactura" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ee52c10a-e912-44cc-9890-5a6301ba74cb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="133"/>
+	<parameter name="numFactura" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Pedro Armas\\Documents\\NetBeansProjects\\SalesJavaApp\\src\\org\\pedroarmas\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Factura F inner join Cliente C on F.codigoCliente = C.codigoCliente
+	inner join FormaPago FP on F.codigoFormaPago = FP.codigoFormaPago where numeroFactura = $P{numFactura};]]>
+	</queryString>
+	<field name="numeroFactura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaFactura" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoFormaPago" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="domicilioCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaNacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="otrosDetalles" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="153" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="14" forecolor="#99CCFF" backcolor="#99CCFF" uuid="4532ba65-fafa-49b9-91da-74366066746f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="14" width="171" height="40" uuid="d2dae4a4-66fd-4909-9826-867410a2f6f2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Factura Número]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="171" y="14" width="106" height="40" forecolor="#CC0033" uuid="b7c2bc75-937f-4466-9068-53a436642db6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="54" width="171" height="27" uuid="5bf75556-5352-4f8e-9a2b-675d9cde620b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prototipos Guatemala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="81" width="171" height="43" uuid="d46278ec-1c46-416e-bd21-c41de6fb5677"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[prototiposguatemala@pg.com.gt
+Mixco, Guatemala
+PBX: 2438-1548]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="580" y="26" width="160" height="84" uuid="309bce9d-0527-4c40-9c60-4b3eb5aead20"/>
+				<imageExpression><![CDATA["C:\\Users\\Pedro Armas\\Documents\\NetBeansProjects\\SalesJavaApp\\src\\org\\pedroarmas\\image\\LogoFactura.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="0" y="138" width="752" height="14" forecolor="#99CCFF" backcolor="#99CCFF" uuid="68eaf6e0-dbe6-4374-8f0f-fb8c884154c6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="635" y="110" width="56" height="14" uuid="c55850f5-b9a7-4950-9c92-71a739aeb786"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[455825-k]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="76" splitType="Stretch">
+			<textField>
+				<reportElement x="135" y="0" width="100" height="20" uuid="c46560c6-fe73-489b-8917-01d5ff688321"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaFactura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="119" height="20" uuid="88eb1b63-9362-4fd0-bd64-53307639eca1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Factura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="119" height="20" uuid="f19e43fa-99ec-474b-83a6-865c19cd7080"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="135" y="20" width="144" height="20" uuid="230e5fcd-24d9-4b91-97c1-96912d6571c9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="20" width="120" height="20" uuid="9ae78ddd-92b9-4769-9291-d9cb932a6ef5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidoCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="130" height="20" uuid="ca85e0aa-0654-40b2-b947-99674940d4d6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección del Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="135" y="40" width="264" height="20" uuid="d74fdb14-50e2-49f2-bbbe-e426d5168c55"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{domicilioCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="418" y="0" width="130" height="20" uuid="51cdae09-e15c-45a4-a30a-d1a3049a8033"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono del Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="548" y="0" width="157" height="20" uuid="f646cae6-c3be-44bb-8d0c-4ab5d716bcf4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="418" y="20" width="130" height="20" uuid="2a499808-6614-4a51-88a6-040e0ad1ab78"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email del Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="548" y="20" width="157" height="20" uuid="004c4541-6b70-4d55-bee3-ab1c9c2e6ef6"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{correoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="548" y="40" width="157" height="20" uuid="3d91085f-50ba-4645-b177-b480fc4e0791"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePago}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="418" y="40" width="130" height="20" uuid="50828308-e6a0-4e63-916b-551a85b27233"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Forma de Pago:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="740" height="125" uuid="b4f300b6-215f-46f8-9f40-23ce23f14488"/>
+				<subreportParameter name="numFactura">
+					<subreportParameterExpression><![CDATA[$P{numFactura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ReporteDetalleFactura.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="567" y="34" width="173" height="20" uuid="4490dd59-54ff-4d43-9ca9-8a3d77117383"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[De todo en un mismo lugar...]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

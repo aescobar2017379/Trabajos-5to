@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="678.0" style="-fx-background-color: #D8D8D8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.pedroarmas.controller.UsuarioController">
+   <children>
+      <Pane layoutX="-39.0" layoutY="-38.0" prefHeight="417.0" prefWidth="412.0" rotate="-63.4" style="-fx-background-color: #499F9C; -fx-background-radius: 30;" />
+      <Pane layoutX="506.0" layoutY="51.0" prefHeight="417.0" prefWidth="412.0" rotate="56.3" style="-fx-background-color: #499F9C; -fx-background-radius: 30;" />
+      <AnchorPane prefHeight="400.0" prefWidth="162.0" style="-fx-background-color: #BDBDBD;">
+         <children>
+            <VBox layoutY="167.0" prefHeight="233.0" prefWidth="167.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="39.0" prefWidth="167.0" styleClass="button1" stylesheets="@../resource/SalesObjects.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="167.0" styleClass="button1" stylesheets="@../resource/SalesObjects.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="167.0" styleClass="button1" stylesheets="@../resource/SalesObjects.css" text="Editar">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="39.0" prefWidth="167.0" styleClass="button1" stylesheets="@../resource/SalesObjects.css" text="Reporte">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutY="101.0" prefHeight="50.0" prefWidth="167.0" style="-fx-background-color: #6E6E6E; -fx-background-radius: 25 25 25 25;">
+               <children>
+                  <Label layoutX="19.0" layoutY="8.0" text="Usuarios" textFill="WHITE">
+                     <font>
+                        <Font name="Britannic Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="40.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/usuario.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="197.0" layoutY="22.0" prefHeight="256.0" prefWidth="418.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="148.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="240.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Usuario" textFill="#94782d">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Nombre Usuario" textFill="#94782d" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Apellido Usuario" textFill="#94782d" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Usuario" textFill="#94782d" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Contraseña" textFill="#94782d" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Britannic Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoUsuario" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellidoUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPassword" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
